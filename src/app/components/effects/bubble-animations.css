@@ -1,0 +1,96 @@
+/* Bubble Animation Keyframes */
+/* Subtle, enterprise-grade underwater bubble effects */
+
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20vh) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes bubble-sway {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  75% {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes bubble-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes bubble-float {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(60vh) translateX(15px) scale(1.05);
+  }
+  50% {
+    transform: translateY(30vh) translateX(-10px) scale(1.1);
+  }
+  75% {
+    transform: translateY(10vh) translateX(20px) scale(1.05);
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(0) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Bubble Base Styles */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
+  contain: layout style paint;
+}
+
+/* Accessibility: Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .bubble {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Responsive Bubble Adjustments */
+@media (max-width: 640px) {
+  .bubble {
+    animation-duration: 25s !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .bubble {
+    animation-duration: 20s !important;
+  }
+}
