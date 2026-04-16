@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+bower_components/
+vendor/
+
+# Package lock files (optional, uncomment if needed)
+# package-lock.json
+# yarn.lock
+
+# Build output
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.user
