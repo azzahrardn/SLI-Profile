@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import logo from "../../assets/logo.png";
+import logoPutih from "../../assets/logo_putih.png";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useLanguage } from "./LanguageContext";
@@ -69,7 +70,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
             <div className="flex items-center gap-2">
               <img
-                src={logo}
+                src={scrolled || mobileOpen ? logo : logoPutih}
                 alt="SLI Logo"
                 className="h-8 sm:h-10 md:h-14 w-auto"
               />
@@ -89,8 +90,8 @@ export function Navbar() {
                           ? "text-[#0891b2] bg-[#e0f2fe]"
                           : "text-[#0c4a6e] hover:text-[#0891b2] hover:bg-[#f0f9ff]"
                         : isActive
-                        ? "text-white bg-white/20"
-                        : "text-white/80 hover:text-white hover:bg-white/10"
+                          ? "text-white bg-white/20"
+                          : "text-white/80 hover:text-white hover:bg-white/10"
                     }`}
                   >
                     {t(link.key)}
@@ -103,8 +104,12 @@ export function Navbar() {
                 <span
                   className={`text-xs transition-colors ${
                     scrolled
-                      ? lang === "en" ? "text-[#0c4a6e]" : "text-[#94a3b8]"
-                      : lang === "en" ? "text-white" : "text-white/50"
+                      ? lang === "en"
+                        ? "text-[#0c4a6e]"
+                        : "text-[#94a3b8]"
+                      : lang === "en"
+                        ? "text-white"
+                        : "text-white/50"
                   }`}
                 >
                   EN
@@ -113,8 +118,12 @@ export function Navbar() {
                   onClick={toggleLang}
                   className={`relative w-10 h-[22px] rounded-full transition-colors ${
                     scrolled
-                      ? lang === "id" ? "bg-[#0891b2]" : "bg-[#cbd5e1]"
-                      : lang === "id" ? "bg-[#38bdf8]" : "bg-white/30"
+                      ? lang === "id"
+                        ? "bg-[#0891b2]"
+                        : "bg-[#cbd5e1]"
+                      : lang === "id"
+                        ? "bg-[#38bdf8]"
+                        : "bg-white/30"
                   }`}
                   aria-label="Toggle language"
                 >
@@ -127,8 +136,12 @@ export function Navbar() {
                 <span
                   className={`text-xs transition-colors ${
                     scrolled
-                      ? lang === "id" ? "text-[#0c4a6e]" : "text-[#94a3b8]"
-                      : lang === "id" ? "text-white" : "text-white/50"
+                      ? lang === "id"
+                        ? "text-[#0c4a6e]"
+                        : "text-[#94a3b8]"
+                      : lang === "id"
+                        ? "text-white"
+                        : "text-white/50"
                   }`}
                 >
                   ID
@@ -147,9 +160,13 @@ export function Navbar() {
                     : "bg-white/15 text-white"
                 }`}
               >
-                <span className={lang === "en" ? "opacity-100" : "opacity-50"}>EN</span>
+                <span className={lang === "en" ? "opacity-100" : "opacity-50"}>
+                  EN
+                </span>
                 <span className="opacity-30">/</span>
-                <span className={lang === "id" ? "opacity-100" : "opacity-50"}>ID</span>
+                <span className={lang === "id" ? "opacity-100" : "opacity-50"}>
+                  ID
+                </span>
               </button>
 
               <button
@@ -160,9 +177,7 @@ export function Navbar() {
                 {mobileOpen ? (
                   <X
                     className={`w-6 h-6 ${
-                      scrolled || mobileOpen
-                        ? "text-[#0c4a6e]"
-                        : "text-white"
+                      scrolled || mobileOpen ? "text-[#0c4a6e]" : "text-white"
                     }`}
                   />
                 ) : (
@@ -199,8 +214,7 @@ export function Navbar() {
             >
               <div className="px-4 py-3 flex flex-col">
                 {navKeys.map((link, idx) => {
-                  const isActive =
-                    activeSection === link.href.replace("#", "");
+                  const isActive = activeSection === link.href.replace("#", "");
                   return (
                     <motion.button
                       key={link.href}
