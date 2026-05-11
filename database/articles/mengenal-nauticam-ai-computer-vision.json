@@ -1,0 +1,21 @@
+{
+    "source":  "Tim Riset \u0026 Pengembangan AI",
+    "id":  "mengenal-nauticam-ai-computer-vision",
+    "excerpt":  "Pelajari bagaimana teknologi computer vision yang tertanam dalam NauticamAI mampu mendeteksi ancaman, memantau kondisi dek, dan meningkatkan keselamatan pelayaran secara otomatis.",
+    "category":  "education",
+    "tags":  [
+                 "#nauticam-ai",
+                 "#computer-vision",
+                 "#keselamatan",
+                 "#teknologi-maritim"
+             ],
+    "images":  [
+                   "https://placehold.co/1200x600/0891b2/white?text=Computer+Vision+Kapal",
+                   "https://placehold.co/600x400/0c4a6e/white?text=Kamera+AI",
+                   "https://placehold.co/600x400/0891b2/white?text=Deteksi+Objek"
+               ],
+    "date":  "10 April 2026",
+    "content":  "\u003cp\u003eNauticamAI adalah solusi pemantauan berbasis kecerdasan buatan yang dirancang khusus untuk lingkungan maritim. Teknologi inti yang menopangnya adalah computer vision — kemampuan komputer untuk melihat dan menginterpretasikan dunia visual seperti manusia.\u003c/p\u003e\u003cp\u003ePada kapal, kamera-kamera yang terhubung ke sistem NauticamAI secara terus-menerus menganalisis kondisi dek, muatan, dan area sekitar kapal. Sistem akan secara otomatis mendeteksi potensi bahaya seperti kru yang terjatuh, kebakaran dini, atau objek asing di jalur navigasi.\u003c/p\u003e\u003cp\u003eYang membuat NauticamAI unggul adalah kemampuannya beroperasi dalam kondisi visibilitas rendah — kabut tebal, malam hari, atau cuaca buruk — menggunakan kombinasi kamera optik dan inframerah yang diproses oleh model AI.\u003c/p\u003e\u003cp\u003eDengan respons deteksi rata-rata di bawah 2 detik, sistem ini memberikan waktu yang cukup bagi kru untuk mengambil tindakan pencegahan sebelum insiden berkembang menjadi kecelakaan serius.\u003c/p\u003e",
+    "title":  "Mengenal NauticamAI: Bagaimana Computer Vision Menjaga Keselamatan Kapal",
+    "thumbnail":  "https://placehold.co/600x400/0891b2/white?text=NauticamAI"
+}

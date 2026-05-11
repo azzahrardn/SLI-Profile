@@ -1,0 +1,22 @@
+{
+    "source":  "Tim Pelatihan \u0026 Dokumentasi",
+    "id":  "panduan-e-logbook-untuk-nakhoda",
+    "excerpt":  "Panduan praktis untuk memaksimalkan penggunaan modul e-Logbook dalam FleetMaster — dari pencatatan harian, pelaporan insiden, hingga ekspor dokumen untuk keperluan regulasi.",
+    "category":  "education",
+    "tags":  [
+                 "#e-logbook",
+                 "#panduan",
+                 "#fleetmaster",
+                 "#regulasi",
+                 "#nakhoda"
+             ],
+    "images":  [
+                   "https://placehold.co/1200x600/0c4a6e/white?text=e-Logbook+Dashboard",
+                   "https://placehold.co/600x400/0891b2/white?text=Fitur+Pencatatan",
+                   "https://placehold.co/600x400/0c4a6e/white?text=Laporan+Otomatis"
+               ],
+    "date":  "20 Maret 2026",
+    "content":  "\u003cp\u003eModul e-Logbook dalam FleetMaster dirancang untuk menggantikan buku log fisik yang selama ini menjadi kewajiban administratif di setiap kapal. Dengan e-Logbook, seluruh pencatatan dilakukan secara digital, tersinkronisasi ke cloud, dan dapat diakses oleh manajemen darat secara real-time.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003ePencatatan Harian\u003c/strong\u003e\u003cbr/\u003eSetiap pergantian jaga, perwira jaga dapat mengisi log secara digital melalui tablet yang terpasang di anjungan. Sistem akan otomatis mengisi data seperti posisi GPS, kondisi cuaca, dan kecepatan kapal.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003ePelaporan Insiden\u003c/strong\u003e\u003cbr/\u003eUntuk setiap kejadian luar biasa, e-Logbook menyediakan formulir pelaporan insiden terstruktur yang memastikan semua informasi kritis tercatat dengan format yang sesuai regulasi IMO dan KNKT.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eEkspor Dokumen\u003c/strong\u003e\u003cbr/\u003eSeluruh catatan log dapat diekspor dalam format PDF standar yang diterima oleh otoritas pelabuhan dan badan klasifikasi.\u003c/p\u003e",
+    "title":  "Panduan Lengkap Penggunaan e-Logbook untuk Nakhoda dan Perwira Kapal",
+    "thumbnail":  "https://placehold.co/600x400/0c4a6e/white?text=e-Logbook+Guide"
+}

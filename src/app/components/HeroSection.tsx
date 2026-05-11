@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "./LanguageContext";
@@ -37,11 +38,14 @@ export function HeroSection() {
             {t("hero.title1")}{" "}
             <span className="text-[#38bdf8]">{t("hero.titleHighlight")}</span>
           </h1>
-          <p className="text-[#bae6fd] text-base sm:text-lg md:text-xl mb-3 sm:mb-4">
+          <p className="text-[#bae6fd] text-base sm:text-lg md:text-xl mb-2 sm:mb-3">
             {t("hero.tagline")}
           </p>
-          <p className="text-[#7dd3fc]/80 text-xs sm:text-sm mb-8 sm:mb-10">
+          <p className="text-[#7dd3fc]/80 text-sm sm:text-base mb-3 sm:mb-4">
             {t("hero.tagline2")}
+          </p>
+          <p className="text-[#7dd3fc]/70 text-xs sm:text-sm mb-8 sm:mb-10">
+            {t("hero.tagline3")}
           </p>
         </motion.div>
 
@@ -50,17 +54,12 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <button
-            onClick={() =>
-              document
-                .querySelector("#tentang")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
+          <Link
+            to="/about"
             className="inline-flex items-center gap-2 bg-[#0891b2] hover:bg-[#0e7490] active:bg-[#155e75] text-white px-6 sm:px-8 py-3 rounded-full transition-colors text-sm sm:text-base"
           >
             {t("hero.cta")}
-            <ChevronDown className="w-4 h-4" />
-          </button>
+          </Link>
         </motion.div>
       </div>
 

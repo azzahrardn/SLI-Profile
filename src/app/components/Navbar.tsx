@@ -1,39 +1,28 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router";
 import logo from "../../assets/logo.png";
 import logoPutih from "../../assets/logo_putih.png";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useLanguage } from "./LanguageContext";
 
-const navKeys = [
-  { key: "nav.about", href: "#tentang" },
-  { key: "nav.visionMission", href: "#visi-misi" },
-  { key: "nav.affiliation", href: "#afiliasi" },
-  { key: "nav.team", href: "#tim" },
-  { key: "nav.technology", href: "#teknologi" },
-  { key: "nav.products", href: "#products" },
-  { key: "nav.whySLI", href: "#mengapa-sli" },
-  { key: "nav.contact", href: "#kontak" },
+const navLinks = [
+  { key: "nav.home", path: "/" },
+  { key: "nav.about", path: "/about" },
+  { key: "nav.solution", path: "/solution" },
+  { key: "nav.product", path: "/product" },
+  { key: "nav.articles", path: "/artikel" },
+  { key: "nav.contact", path: "/contact" },
 ];
 
 export function Navbar() {
   const { lang, toggleLang, t } = useLanguage();
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 50);
-      const sections = navKeys.map((l) => l.href.replace("#", ""));
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el && el.getBoundingClientRect().top <= 120) {
-          setActiveSection(sections[i]);
-          break;
-        }
-      }
-    };
+    const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -49,19 +38,30 @@ export function Navbar() {
     };
   }, [mobileOpen]);
 
-  const handleClick = useCallback((href: string) => {
-    setMobileOpen(false);
-    setTimeout(() => {
-      const el = document.querySelector(href);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    }, 100);
-  }, []);
+  const isHome = location.pathname === "/";
+  const isScrolledForStyle = scrolled || !isHome;
+
+  const isActive = (path: string) => {
+    if (path === "/") return isHome;
+    return location.pathname.startsWith(path);
+  };
+
+  const navItemClass = (path: string) =>
+    `text-sm px-3 py-2 rounded-full transition-all ${
+      isScrolledForStyle
+        ? isActive(path)
+          ? "text-[#0891b2] bg-[#e0f2fe]"
+          : "text-[#0c4a6e] hover:text-[#0891b2] hover:bg-[#f0f9ff]"
+        : isActive(path)
+          ? "text-white bg-white/20"
+          : "text-white/80 hover:text-white hover:bg-white/10"
+    }`;
 
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled || mobileOpen
+          isScrolledForStyle || mobileOpen
             ? "bg-white/95 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         }`}
@@ -69,41 +69,32 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
             <div className="flex items-center gap-2">
-              <img
-                src={scrolled || mobileOpen ? logo : logoPutih}
-                alt="SLI Logo"
-                className="h-8 sm:h-10 md:h-14 w-auto"
-              />
+              <Link to="/">
+                <img
+                  src={isScrolledForStyle || mobileOpen ? logo : logoPutih}
+                  alt="SLI Logo"
+                  className="h-8 sm:h-10 md:h-14 w-auto"
+                />
+              </Link>
             </div>
 
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-1 xl:gap-4">
-              {navKeys.map((link) => {
-                const isActive = activeSection === link.href.replace("#", "");
-                return (
-                  <button
-                    key={link.href}
-                    onClick={() => handleClick(link.href)}
-                    className={`text-sm px-3 py-2 rounded-full transition-all ${
-                      scrolled
-                        ? isActive
-                          ? "text-[#0891b2] bg-[#e0f2fe]"
-                          : "text-[#0c4a6e] hover:text-[#0891b2] hover:bg-[#f0f9ff]"
-                        : isActive
-                          ? "text-white bg-white/20"
-                          : "text-white/80 hover:text-white hover:bg-white/10"
-                    }`}
-                  >
-                    {t(link.key)}
-                  </button>
-                );
-              })}
+            <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={navItemClass(link.path)}
+                >
+                  {t(link.key)}
+                </Link>
+              ))}
 
               {/* Language Toggle */}
               <div className="ml-2 flex items-center gap-1.5">
                 <span
                   className={`text-xs transition-colors ${
-                    scrolled
+                    isScrolledForStyle
                       ? lang === "en"
                         ? "text-[#0c4a6e]"
                         : "text-[#94a3b8]"
@@ -117,7 +108,7 @@ export function Navbar() {
                 <button
                   onClick={toggleLang}
                   className={`relative w-10 h-[22px] rounded-full transition-colors ${
-                    scrolled
+                    isScrolledForStyle
                       ? lang === "id"
                         ? "bg-[#0891b2]"
                         : "bg-[#cbd5e1]"
@@ -135,7 +126,7 @@ export function Navbar() {
                 </button>
                 <span
                   className={`text-xs transition-colors ${
-                    scrolled
+                    isScrolledForStyle
                       ? lang === "id"
                         ? "text-[#0c4a6e]"
                         : "text-[#94a3b8]"
@@ -151,22 +142,17 @@ export function Navbar() {
 
             {/* Mobile: lang toggle + menu button */}
             <div className="flex items-center gap-2 lg:hidden">
-              {/* Compact mobile language toggle */}
               <button
                 onClick={toggleLang}
                 className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs transition-all ${
-                  scrolled || mobileOpen
+                  isScrolledForStyle || mobileOpen
                     ? "bg-[#f0f9ff] text-[#0c4a6e]"
                     : "bg-white/15 text-white"
                 }`}
               >
-                <span className={lang === "en" ? "opacity-100" : "opacity-50"}>
-                  EN
-                </span>
+                <span className={lang === "en" ? "opacity-100" : "opacity-50"}>EN</span>
                 <span className="opacity-30">/</span>
-                <span className={lang === "id" ? "opacity-100" : "opacity-50"}>
-                  ID
-                </span>
+                <span className={lang === "id" ? "opacity-100" : "opacity-50"}>ID</span>
               </button>
 
               <button
@@ -175,17 +161,9 @@ export function Navbar() {
                 aria-label={mobileOpen ? "Close menu" : "Open menu"}
               >
                 {mobileOpen ? (
-                  <X
-                    className={`w-6 h-6 ${
-                      scrolled || mobileOpen ? "text-[#0c4a6e]" : "text-white"
-                    }`}
-                  />
+                  <X className={`w-6 h-6 ${isScrolledForStyle || mobileOpen ? "text-[#0c4a6e]" : "text-white"}`} />
                 ) : (
-                  <Menu
-                    className={`w-6 h-6 ${
-                      scrolled ? "text-[#0c4a6e]" : "text-white"
-                    }`}
-                  />
+                  <Menu className={`w-6 h-6 ${isScrolledForStyle ? "text-[#0c4a6e]" : "text-white"}`} />
                 )}
               </button>
             </div>
@@ -213,23 +191,27 @@ export function Navbar() {
               className="fixed top-14 sm:top-16 left-0 right-0 z-50 lg:hidden bg-white shadow-2xl border-t border-[#e0f2fe] max-h-[calc(100vh-3.5rem)] overflow-y-auto"
             >
               <div className="px-4 py-3 flex flex-col">
-                {navKeys.map((link, idx) => {
-                  const isActive = activeSection === link.href.replace("#", "");
+                {navLinks.map((link, idx) => {
+                  const active = isActive(link.path);
                   return (
-                    <motion.button
-                      key={link.href}
+                    <motion.div
+                      key={link.path}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: idx * 0.04 }}
-                      onClick={() => handleClick(link.href)}
-                      className={`text-left py-3.5 px-4 rounded-xl text-base transition-all active:scale-[0.98] ${
-                        isActive
-                          ? "text-[#0891b2] bg-[#f0f9ff]"
-                          : "text-[#0c4a6e] hover:bg-[#f0f9ff]"
-                      }`}
                     >
-                      {t(link.key)}
-                    </motion.button>
+                      <Link
+                        to={link.path}
+                        onClick={() => setMobileOpen(false)}
+                        className={`flex py-3.5 px-4 rounded-xl text-base transition-all active:scale-[0.98] ${
+                          active
+                            ? "text-[#0891b2] bg-[#f0f9ff]"
+                            : "text-[#0c4a6e] hover:bg-[#f0f9ff]"
+                        }`}
+                      >
+                        {t(link.key)}
+                      </Link>
+                    </motion.div>
                   );
                 })}
               </div>

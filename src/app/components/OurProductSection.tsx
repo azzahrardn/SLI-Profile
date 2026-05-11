@@ -99,24 +99,74 @@ function ProductFeatureScroll({ features }: { features: Feature[] }) {
   const [activeIdx, setActiveIdx] = useState(0);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
+  const isAutoRef = useRef(false);
 
+  // Auto-scroll list agar item aktif tetap terlihat
+  useEffect(() => {
+    const item = itemRefs.current[activeIdx];
+    const container = containerRef.current;
+    if (!item || !container) return;
+
+    const containerRect = container.getBoundingClientRect();
+    const itemRect = item.getBoundingClientRect();
+
+    const isAbove = itemRect.top < containerRect.top;
+    const isBelow = itemRect.bottom > containerRect.bottom;
+
+    if (isAbove || isBelow) {
+      item.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }, [activeIdx]);
+
+  // Auto-switch feature setiap 5 detik
+  useEffect(() => {
+    isAutoRef.current = true;
+    setActiveIdx(0);
+
+    const interval = setInterval(() => {
+      isAutoRef.current = true;
+      setActiveIdx((prev) => (prev + 1) % features.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [features]);
+
+  // IntersectionObserver — hanya aktif saat TIDAK auto-switch
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
 
-    itemRefs.current.forEach((el, idx) => {
+    itemRefs.current.forEach((el) => {
       if (!el) return;
       const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveIdx(idx);
+        () => {
+          // Skip jika sedang auto-switch, biar interval yang kontrol
+          if (isAutoRef.current) return;
+
+          const container = containerRef.current;
+          if (!container) return;
+          const containerRect = container.getBoundingClientRect();
+          const containerCenter = containerRect.top + containerRect.height / 2;
+
+          let bestIdx = 0;
+          let bestDistance = Infinity;
+
+          itemRefs.current.forEach((item, idx) => {
+            if (!item) return;
+            const itemRect = item.getBoundingClientRect();
+            const itemCenter = itemRect.top + itemRect.height / 2;
+            const distance = Math.abs(itemCenter - containerCenter);
+            if (distance < bestDistance) {
+              bestDistance = distance;
+              bestIdx = idx;
             }
           });
+
+          setActiveIdx(bestIdx);
         },
         {
           root: containerRef.current,
-          rootMargin: "-40% 0px -40% 0px", // hanya trigger saat item di tengah container
-          threshold: 0,
+          rootMargin: "0px",
+          threshold: 1.0,
         },
       );
       observer.observe(el);

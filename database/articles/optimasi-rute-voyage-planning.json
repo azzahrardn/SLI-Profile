@@ -1,0 +1,21 @@
+{
+    "source":  "Tim Riset \u0026 Data Analitik",
+    "id":  "optimasi-rute-voyage-planning",
+    "excerpt":  "Temukan bagaimana fitur Voyage Planning dalam FleetMaster menggunakan data real-time angin, arus, dan gelombang untuk merekomendasikan rute paling efisien bagi armada kapal Anda.",
+    "category":  "education",
+    "tags":  [
+                 "#voyage-planning",
+                 "#efisiensi",
+                 "#bahan-bakar",
+                 "#ai",
+                 "#optimasi-rute"
+             ],
+    "images":  [
+                   "https://placehold.co/1200x600/0891b2/white?text=Route+Optimization",
+                   "https://placehold.co/600x400/0c4a6e/white?text=Peta+Rute+AI"
+               ],
+    "date":  "10 Maret 2026",
+    "content":  "\u003cp\u003eBiaya bahan bakar minyak (BBM) merupakan komponen terbesar dalam struktur biaya operasional kapal, mencapai 40-60% dari total biaya pelayaran.\u003c/p\u003e\u003cp\u003eFitur Voyage Planning dalam FleetMaster mengintegrasikan data meteorologi dan oseanografi real-time dari berbagai sumber terpercaya untuk mengkalkulasi rute pelayaran yang paling hemat energi tanpa mengorbankan ketepatan waktu.\u003c/p\u003e\u003cp\u003eAlgoritma optimasi kami mempertimbangkan lebih dari 20 variabel secara simultan: kecepatan dan arah angin, tinggi dan periode gelombang, arus laut permukaan, lalu lintas kapal di jalur yang sama, hingga kondisi mesin kapal saat ini.\u003c/p\u003e\u003cp\u003eDalam uji coba selama 6 bulan pada 8 kapal klien kami, rata-rata penghematan BBM yang berhasil dicapai adalah 12,3% — dengan nilai tertinggi mencapai 15,7% pada rute panjang melintasi Laut Jawa dan Selat Makassar.\u003c/p\u003e",
+    "title":  "Menghemat BBM hingga 15% dengan Fitur Voyage Planning Berbasis AI",
+    "thumbnail":  "https://placehold.co/600x400/0891b2/white?text=Voyage+Planning"
+}

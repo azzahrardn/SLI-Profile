@@ -1,16 +1,16 @@
 import { useState } from "react";
 import logo from "../../assets/logo.png";
-import { Phone, Mail, Globe, MapPin, ChevronDown, ChevronUp } from "lucide-react";
+import { Link } from "react-router";
 import { useLanguage } from "./LanguageContext";
+import { Phone, Mail, Globe, MapPin, ChevronDown, ChevronUp } from "lucide-react";
 
 const linkKeys = [
-  { key: "nav.about", id: "tentang" },
-  { key: "nav.visionMission", id: "visi-misi" },
-  { key: "nav.affiliation", id: "afiliasi" },
-  { key: "nav.team", id: "tim" },
-  { key: "nav.technology", id: "teknologi" },
-  { key: "nav.products", id: "products" },
-  { key: "nav.whySLI", id: "mengapa-sli" },
+  { key: "nav.home", path: "/" },
+  { key: "nav.about", path: "/about" },
+  { key: "nav.solution", path: "/solution" },
+  { key: "nav.product", path: "/product" },
+  { key: "nav.articles", path: "/artikel" },
+  { key: "nav.contact", path: "/contact" },
 ];
 
 function FooterAccordion({ title, children, defaultOpen = false }: { title: string; children: React.ReactNode; defaultOpen?: boolean }) {
@@ -68,18 +68,14 @@ export function Footer() {
           <FooterAccordion title={t("footer.quickLinks")} defaultOpen={true}>
             <ul className="space-y-3 text-sm">
               {linkKeys.map((link) => (
-                <li key={link.id}>
-                  <button
-                    onClick={() => {
-                      document
-                        .querySelector(`#${link.id}`)
-                        ?.scrollIntoView({ behavior: "smooth" });
-                    }}
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
                     className="flex items-center gap-2 text-[#bae6fc] hover:text-white transition-colors py-1"
                   >
                     <div className="w-1.5 h-1.5 rounded-full bg-[#38bdf8]" />
                     {t(link.key)}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -198,17 +194,13 @@ export function Footer() {
               </h4>
               <ul className="space-y-1 text-xs text-[#bae6fc]">
                 {linkKeys.map((link) => (
-                  <li key={link.id}>
-                    <button
-                      onClick={() => {
-                        document
-                          .querySelector(`#${link.id}`)
-                          ?.scrollIntoView({ behavior: "smooth" });
-                      }}
+                  <li key={link.path}>
+                    <Link
+                      to={link.path}
                       className="hover:text-white transition-colors py-0.5 text-left"
                     >
                       {t(link.key)}
-                    </button>
+                    </Link>
                   </li>
                 ))}
               </ul>

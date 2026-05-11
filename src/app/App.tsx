@@ -1,32 +1,29 @@
+import { Routes, Route } from "react-router";
 import { LanguageProvider } from "./components/LanguageContext";
-import { Navbar } from "./components/Navbar";
-import { HeroSection } from "./components/HeroSection";
-import { AboutSection } from "./components/AboutSection";
-import { VisionMissionSection } from "./components/VisionMissionSection";
-import { AffiliationSection } from "./components/AffiliationSection";
-import { TeamSection } from "./components/TeamSection";
-import { TechnologySection } from "./components/TechnologySection";
-import { OurProductSection } from "./components/OurProductSection";
-import { WhySLISection } from "./components/WhySLISection";
-import { CTASection } from "./components/CTASection";
-import { Footer } from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import SolutionPage from "./pages/SolutionPage";
+import ProductPage from "./pages/ProductPage";
+import { ArticlePage } from "./pages/ArticlePage";
+import { ArticleView } from "./pages/ArticleView";
+import ContactPage from "./pages/ContactPage";
+import { AdminLoginPage } from "./pages/AdminLoginPage";
+import { AdminDashboardPage } from "./pages/AdminDashboardPage";
 
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-white">
-        <Navbar />
-        <HeroSection />
-        <AboutSection />
-        <VisionMissionSection />
-        <AffiliationSection />
-        <TeamSection />
-        <TechnologySection />
-        <OurProductSection />
-        <WhySLISection />
-        <CTASection />
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/solution" element={<SolutionPage />} />
+        <Route path="/product" element={<ProductPage />} />
+        <Route path="/artikel" element={<ArticlePage />} />
+        <Route path="/artikel/:id" element={<ArticleView />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/sli/v1/login" element={<AdminLoginPage />} />
+        <Route path="/sli/v1/dashboard" element={<AdminDashboardPage />} />
+      </Routes>
     </LanguageProvider>
   );
 }
