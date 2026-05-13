@@ -537,6 +537,237 @@ const translations: Record<string, Record<Lang, string>> = {
     id: "Laporan performa armada disusun secara akurat setiap minggu dan setiap voyage — memastikan data operasional selalu up-to-date untuk pengambilan keputusan strategis.",
   },
 
+  // ── Digital Twin Section ──
+  "tech.dt.label": { en: "Core Technology", id: "Teknologi Inti" },
+  "tech.dt.heading": {
+    en: "Digital Twin — Advanced Ship Performance Model",
+    id: "Digital Twin — Model Performa Kapal Canggih",
+  },
+  "tech.dt.subheading": {
+    en: "SLI Fleet Master is built on a vessel-specific Digital Twin framework grounded in naval architecture, ship hydrodynamics, and decades of ship design experience — enabling accurate simulation and prediction of real-world performance.",
+    id: "SLI Fleet Master dibangun di atas framework Digital Twin spesifik kapal yang berlandaskan arsitektur kapal, hidrodinamika, dan puluhan tahun pengalaman desain kapal — memungkinkan simulasi dan prediksi performa nyata yang akurat.",
+  },
+  "tech.dt.inputsLabel": { en: "Data Inputs", id: "Data Masuk" },
+  "tech.dt.outputsLabel": { en: "Outputs", id: "Hasil" },
+  "tech.dt.coreLabel": { en: "Digital Twin", id: "Digital Twin" },
+  "tech.dt.coreTitle": {
+    en: "Advanced Ship Performance Model",
+    id: "Model Performa Kapal Canggih",
+  },
+  "tech.dt.input1": { en: "Chart Data", id: "Data Peta Laut" },
+  "tech.dt.input2": { en: "AIS Data", id: "Data AIS" },
+  "tech.dt.input3": { en: "Global Weather Data", id: "Data Cuaca Global" },
+  "tech.dt.input4": { en: "Noon Reports", id: "Noon Report" },
+  "tech.dt.input5": {
+    en: "Real-Time Automation Data",
+    id: "Data Otomasi Real-Time",
+  },
+  "tech.dt.out1": {
+    en: "Fuel consumption prediction",
+    id: "Prediksi konsumsi BBM",
+  },
+  "tech.dt.out2": {
+    en: "Optimal route & speed profiles",
+    id: "Rute & profil kecepatan optimal",
+  },
+  "tech.dt.out3": {
+    en: "Voyage KPI benchmarking",
+    id: "Benchmarking KPI pelayaran",
+  },
+  "tech.dt.f1Title": {
+    en: "Ship Hydrodynamics Models",
+    id: "Model Hidrodinamika Kapal",
+  },
+  "tech.dt.f1Desc": {
+    en: "Each vessel's resistance, thrust, and motion behaviour is modelled precisely — accounting for hull geometry, loading condition, sea currents, and weather forces.",
+    id: "Resistansi, gaya dorong, dan perilaku gerak setiap kapal dimodelkan secara presisi — memperhitungkan geometri lambung, kondisi muatan, arus laut, dan gaya cuaca.",
+  },
+  "tech.dt.f2Title": {
+    en: "Naval Architectural Principles",
+    id: "Prinsip Arsitektur Kapal",
+  },
+  "tech.dt.f2Desc": {
+    en: "The model is grounded in internationally recognised naval architecture standards, ensuring predictions are scientifically valid and trusted by maritime professionals.",
+    id: "Model ini berlandaskan standar arsitektur kapal yang diakui internasional, memastikan prediksi yang valid secara ilmiah dan dipercaya oleh para profesional maritim.",
+  },
+  "tech.dt.f3Title": {
+    en: "Ship Design Experience",
+    id: "Pengalaman Desain Kapal",
+  },
+  "tech.dt.f3Desc": {
+    en: "Built by engineers with hands-on ship design and construction backgrounds — the Digital Twin reflects real vessel behaviour, not theoretical abstractions.",
+    id: "Dibangun oleh insinyur dengan latar belakang desain dan konstruksi kapal langsung — Digital Twin mencerminkan perilaku kapal nyata, bukan abstraksi teoritis.",
+  },
+
+  // ── ADA 2.0 Section ──
+  "tech.ada.label": { en: "Data Acquisition", id: "Pengumpulan Data" },
+  "tech.ada.heading": {
+    en: "ADA 2.0 — Easy & Reliable Data Collection",
+    id: "ADA 2.0 — Pengumpulan Data yang Mudah & Andal",
+  },
+  "tech.ada.subheading": {
+    en: "The SLI ADA (Automatic Data Acquisition) mobile application transforms how ship crews collect and submit operational data — eliminating manual errors and ensuring every data point is timestamped and geolocated automatically.",
+    id: "Aplikasi mobile SLI ADA (Automatic Data Acquisition) mentransformasi cara kru kapal mengumpulkan dan mengirimkan data operasional — menghilangkan kesalahan manual dan memastikan setiap titik data diberi penanda waktu dan lokasi secara otomatis.",
+  },
+  "tech.ada.f1Title": {
+    en: "Automatic Timestamping & Geolocation",
+    id: "Penanda Waktu & Lokasi Otomatis",
+  },
+  "tech.ada.f1Desc": {
+    en: "Every data entry is automatically stamped with the precise time and GPS position, removing the risk of inaccurate or late reports and providing a verifiable audit trail.",
+    id: "Setiap entri data secara otomatis diberi cap waktu dan posisi GPS yang tepat, menghilangkan risiko laporan yang tidak akurat atau terlambat dan menyediakan jejak audit yang dapat diverifikasi.",
+  },
+  "tech.ada.f2Title": {
+    en: "Automated Data Validation",
+    id: "Validasi Data Otomatis",
+  },
+  "tech.ada.f2Desc": {
+    en: "The SLI Operations Center reviews and validates incoming data daily, flagging any discrepancies between reported figures and expected values based on the Digital Twin model.",
+    id: "Pusat Operasi SLI meninjau dan memvalidasi data masuk setiap hari, menandai setiap perbedaan antara angka yang dilaporkan dan nilai yang diharapkan berdasarkan model Digital Twin.",
+  },
+  "tech.ada.f3Title": {
+    en: "100% Configurable Per Vessel",
+    id: "100% Dapat Dikonfigurasi Per Kapal",
+  },
+  "tech.ada.f3Desc": {
+    en: "Data collection metrics are fully customisable to match each customer's specific vessel type and reporting needs — covering not just engine performance, but also cargo, safety, and operational parameters.",
+    id: "Metrik pengumpulan data sepenuhnya dapat dikonfigurasi sesuai jenis kapal dan kebutuhan pelaporan spesifik setiap pelanggan — mencakup tidak hanya performa mesin, tetapi juga kargo, keselamatan, dan parameter operasional.",
+  },
+  "tech.ada.appTitle": {
+    en: "SLI Fleet Master Mobile App",
+    id: "Aplikasi Mobile SLI Fleet Master",
+  },
+  "tech.ada.appDesc": {
+    en: "Installed on crew devices — no dedicated hardware required. Crew submit structured reports directly from the vessel through a simple, guided interface.",
+    id: "Dipasang di perangkat kru — tidak memerlukan hardware khusus. Kru mengirimkan laporan terstruktur langsung dari kapal melalui antarmuka yang sederhana dan terpandu.",
+  },
+  "tech.ada.reportLabel": { en: "Report Types", id: "Jenis Laporan" },
+  "tech.ada.r1": { en: "Noon", id: "Noon" },
+  "tech.ada.r2": { en: "Voyage", id: "Voyage" },
+  "tech.ada.r3": { en: "Bunker", id: "Bunker" },
+  "tech.ada.r4": { en: "RoB", id: "RoB" },
+  "tech.ada.r5": { en: "Incident", id: "Insiden" },
+  "tech.ada.r6": { en: "AIS", id: "AIS" },
+
+  // ── Connectivity Section ──
+  "tech.conn.label": {
+    en: "Connectivity Infrastructure",
+    id: "Infrastruktur Konektivitas",
+  },
+  "tech.conn.heading": {
+    en: "Always Connected, Wherever Your Fleet Sails",
+    id: "Selalu Terhubung, Di Manapun Armada Berlayar",
+  },
+  "tech.conn.subheading": {
+    en: "SLI Fleet Master operates over a resilient, multi-layer connectivity stack — combining satellite and cellular networks to ensure uninterrupted data flow between vessels and the Operations Center, regardless of location.",
+    id: "SLI Fleet Master beroperasi melalui stack konektivitas multi-lapisan yang tangguh — menggabungkan jaringan satelit dan seluler untuk memastikan aliran data yang tidak terputus antara kapal dan Pusat Operasi, terlepas dari lokasi.",
+  },
+  "tech.conn.c1Label": { en: "Primary", id: "Utama" },
+  "tech.conn.c1Title": {
+    en: "Satellite Connectivity",
+    id: "Konektivitas Satelit",
+  },
+  "tech.conn.c1Desc": {
+    en: "Vessel data is transmitted via satellite link, ensuring coverage in open ocean and remote waters far beyond cellular range. Included in the SLI subscription — no additional hardware procurement required.",
+    id: "Data kapal dikirimkan melalui koneksi satelit, memastikan cakupan di laut lepas dan perairan terpencil jauh melampaui jangkauan seluler. Termasuk dalam langganan SLI — tidak diperlukan pengadaan hardware tambahan.",
+  },
+  "tech.conn.c1Badge": { en: "Global Coverage", id: "Cakupan Global" },
+  "tech.conn.c2Label": { en: "Secondary", id: "Sekunder" },
+  "tech.conn.c2Title": {
+    en: "4G LTE Coastal Network",
+    id: "Jaringan 4G LTE Pesisir",
+  },
+  "tech.conn.c2Desc": {
+    en: "When vessels are within coastal range, 4G LTE provides high-bandwidth, low-latency connectivity for fast data synchronisation, real-time dashboard updates, and crew communications.",
+    id: "Saat kapal berada dalam jangkauan pesisir, 4G LTE menyediakan konektivitas bandwidth tinggi dan latensi rendah untuk sinkronisasi data cepat, pembaruan dashboard real-time, dan komunikasi kru.",
+  },
+  "tech.conn.c2Badge": { en: "High Bandwidth", id: "Bandwidth Tinggi" },
+  "tech.conn.c3Label": { en: "Extended Coverage", id: "Cakupan Diperluas" },
+  "tech.conn.c3Title": {
+    en: "Starlink / LEO Satellite Network",
+    id: "Starlink / Jaringan Satelit LEO",
+  },
+  "tech.conn.c3Desc": {
+    en: "For fleets requiring higher throughput at sea, SLI is compatible with Starlink and other Low Earth Orbit satellite providers — delivering broadband-grade speeds even in the most remote maritime routes.",
+    id: "Untuk armada yang membutuhkan throughput lebih tinggi di laut, SLI kompatibel dengan Starlink dan penyedia satelit Low Earth Orbit lainnya — memberikan kecepatan setara broadband bahkan di rute maritim paling terpencil.",
+  },
+  "tech.conn.c3Badge": { en: "Low Latency", id: "Latensi Rendah" },
+  "tech.conn.c4Label": { en: "Backend", id: "Backend" },
+  "tech.conn.c4Title": {
+    en: "Secured Cloud Infrastructure",
+    id: "Infrastruktur Cloud Aman",
+  },
+  "tech.conn.c4Desc": {
+    en: "All fleet data is stored and processed in a secured cloud environment — with role-based access controls, encrypted data transmission, and high-availability architecture to ensure data integrity and system uptime.",
+    id: "Semua data armada disimpan dan diproses di lingkungan cloud yang aman — dengan kontrol akses berbasis peran, transmisi data terenkripsi, dan arsitektur ketersediaan tinggi untuk memastikan integritas data dan uptime sistem.",
+  },
+  "tech.conn.c4Badge": { en: "Encrypted", id: "Terenkripsi" },
+  "tech.conn.note1": {
+    en: "4G & Satellite connectivity included.",
+    id: "Konektivitas 4G & Satelit sudah termasuk.",
+  },
+  "tech.conn.note2": {
+    en: "All connectivity costs are bundled into the SLI monthly subscription per vessel — no separate data plan or hardware procurement needed.",
+    id: "Semua biaya konektivitas sudah termasuk dalam langganan bulanan SLI per kapal — tidak diperlukan paket data terpisah atau pengadaan hardware.",
+  },
+
+  // ── Data Intelligence Section ──
+  "tech.intel.label": { en: "Data Intelligence", id: "Inteligensi Data" },
+  "tech.intel.heading": {
+    en: "External Data Integration & AI-Powered Optimisation",
+    id: "Integrasi Data Eksternal & Optimasi Berbasis AI",
+  },
+  "tech.intel.subheading": {
+    en: "SLI Fleet Master enriches vessel performance data with external intelligence sources, enabling smarter decisions and more accurate predictions across every voyage.",
+    id: "SLI Fleet Master memperkaya data performa kapal dengan sumber inteligensi eksternal, memungkinkan keputusan yang lebih cerdas dan prediksi yang lebih akurat di setiap pelayaran.",
+  },
+  "tech.intel.i1Title": {
+    en: "AIS Data Integration",
+    id: "Integrasi Data AIS",
+  },
+  "tech.intel.i1Desc": {
+    en: "Automatic Identification System data provides real-time vessel position, speed, and heading — cross-referenced with noon reports to detect reporting discrepancies and validate actual performance.",
+    id: "Data Automatic Identification System menyediakan posisi, kecepatan, dan arah kapal secara real-time — dicocokkan dengan noon report untuk mendeteksi perbedaan pelaporan dan memvalidasi performa aktual.",
+  },
+  "tech.intel.i2Title": { en: "Global Weather Data", id: "Data Cuaca Global" },
+  "tech.intel.i2Desc": {
+    en: "Real-time and forecast weather data — including wind, waves, swell, sea currents, water depth, and tropical storm tracking — is integrated into both the Digital Twin model and the voyage optimisation engine.",
+    id: "Data cuaca real-time dan prakiraan — termasuk angin, gelombang, ombak, arus laut, kedalaman air, dan pelacakan badai tropis — diintegrasikan ke dalam model Digital Twin dan mesin optimasi pelayaran.",
+  },
+  "tech.intel.i3Title": {
+    en: "Chart Data & ECA Visualisation",
+    id: "Data Peta & Visualisasi ECA",
+  },
+  "tech.intel.i3Desc": {
+    en: "Navigational chart data is overlaid with Emission Control Areas (ECA) and high-risk zone boundaries, giving fleet managers a complete operational picture for compliance and safety planning.",
+    id: "Data peta navigasi ditumpangi dengan batas Emission Control Area (ECA) dan zona berisiko tinggi, memberikan gambaran operasional lengkap kepada manajer armada untuk perencanaan kepatuhan dan keselamatan.",
+  },
+  "tech.intel.aiLabel": {
+    en: "AI-Assisted Optimisation",
+    id: "Optimasi Berbantuan AI",
+  },
+  "tech.intel.aiTitle": {
+    en: "Voyage Path Optimisation Engine",
+    id: "Mesin Optimasi Rute Pelayaran",
+  },
+  "tech.intel.aiDesc": {
+    en: "Combining the Digital Twin with real-time weather and AIS data, SLI's AI-assisted optimisation engine calculates the optimal route and speed profile for any voyage — balancing fuel efficiency, safety, regulatory compliance, and arrival time targets. Route plans can be exported as PDF or ECDIS-compatible formats.",
+    id: "Menggabungkan Digital Twin dengan data cuaca real-time dan AIS, mesin optimasi berbantuan AI SLI menghitung rute dan profil kecepatan optimal untuk setiap pelayaran — menyeimbangkan efisiensi bahan bakar, keselamatan, kepatuhan regulasi, dan target waktu kedatangan. Rencana rute dapat diekspor dalam format PDF atau kompatibel ECDIS.",
+  },
+  "tech.intel.goalsLabel": {
+    en: "Optimisation Objectives",
+    id: "Tujuan Optimasi",
+  },
+  "tech.intel.goal1": { en: "Arrival time", id: "Waktu kedatangan" },
+  "tech.intel.goal2": { en: "Constant speed", id: "Kecepatan konstan" },
+  "tech.intel.goal3": { en: "RPM target", id: "Target RPM" },
+  "tech.intel.goal4": { en: "Engine load", id: "Beban mesin" },
+  "tech.intel.goal5": { en: "Max daily profit", id: "Profit harian maksimal" },
+  "tech.intel.goal6": {
+    en: "Overall cost reduction",
+    id: "Pengurangan biaya total",
+  },
+
   // ── CTA (Section 08) ──
   "cta.label": {
     en: "Join the Transformation",

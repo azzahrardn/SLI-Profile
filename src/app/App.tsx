@@ -9,6 +9,7 @@ import { ArticleView } from "./pages/ArticleView";
 import ContactPage from "./pages/ContactPage";
 import { AdminLoginPage } from "./pages/AdminLoginPage";
 import { AdminDashboardPage } from "./pages/AdminDashboardPage";
+import TechnologyPage from "./pages/TechnologyPage";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/solution" element={<SolutionPage />} />
+        <Route path="/technology" element={<TechnologyPage />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/artikel" element={<ArticlePage />} />
         <Route path="/artikel/:id" element={<ArticleView />} />

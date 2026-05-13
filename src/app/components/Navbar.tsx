@@ -10,6 +10,7 @@ const navLinks = [
   { key: "nav.home", path: "/" },
   { key: "nav.about", path: "/about" },
   { key: "nav.solution", path: "/solution" },
+  { key: "nav.technology", path: "/technology" },
   { key: "nav.product", path: "/product" },
   { key: "nav.articles", path: "/artikel" },
   { key: "nav.contact", path: "/contact" },
@@ -150,9 +151,13 @@ export function Navbar() {
                     : "bg-white/15 text-white"
                 }`}
               >
-                <span className={lang === "en" ? "opacity-100" : "opacity-50"}>EN</span>
+                <span className={lang === "en" ? "opacity-100" : "opacity-50"}>
+                  EN
+                </span>
                 <span className="opacity-30">/</span>
-                <span className={lang === "id" ? "opacity-100" : "opacity-50"}>ID</span>
+                <span className={lang === "id" ? "opacity-100" : "opacity-50"}>
+                  ID
+                </span>
               </button>
 
               <button
@@ -161,9 +166,13 @@ export function Navbar() {
                 aria-label={mobileOpen ? "Close menu" : "Open menu"}
               >
                 {mobileOpen ? (
-                  <X className={`w-6 h-6 ${isScrolledForStyle || mobileOpen ? "text-[#0c4a6e]" : "text-white"}`} />
+                  <X
+                    className={`w-6 h-6 ${isScrolledForStyle || mobileOpen ? "text-[#0c4a6e]" : "text-white"}`}
+                  />
                 ) : (
-                  <Menu className={`w-6 h-6 ${isScrolledForStyle ? "text-[#0c4a6e]" : "text-white"}`} />
+                  <Menu
+                    className={`w-6 h-6 ${isScrolledForStyle ? "text-[#0c4a6e]" : "text-white"}`}
+                  />
                 )}
               </button>
             </div>
