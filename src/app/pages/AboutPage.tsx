@@ -7,7 +7,7 @@ import { Footer } from "../components/Footer";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white pt-24 sm:pt-28">
+    <div className="min-h-screen bg-white pt-12 sm:pt-28">
       <Navbar />
       <AboutSection />
       <VisionMissionSection />

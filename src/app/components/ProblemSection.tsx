@@ -14,7 +14,7 @@ export function ProblemSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 sm:py-20 md:py-28 bg-[#f8fafc]">
+    <section className="py-16 sm:py-10 md:py-18 bg-white">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

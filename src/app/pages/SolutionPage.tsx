@@ -7,7 +7,7 @@ import { Footer } from "../components/Footer";
 
 export default function SolutionPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-12 sm:pt-28">
       <Navbar />
       <ProblemSection />
       <SolutionSection />

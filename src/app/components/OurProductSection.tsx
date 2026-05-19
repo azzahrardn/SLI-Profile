@@ -1,19 +1,27 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
-  Camera,
-  Monitor,
-  Activity,
-  Database,
-  Search,
-  Bell,
+  // Fleet Master Icons
   Ship,
   Compass,
   Map,
   Book,
   Navigation,
+  // NauticamAI Icons (Baru)
+  Eye, // Untuk Bridge (Oversight)
+  ShieldAlert, // Untuk Safety (Intervention)
+  Wrench, // Untuk Technical (Failure Prevention)
+  Lock, // Untuk Security (Threat Defense)
+  Leaf, // Untuk MARPOL (Environmental/Pollution)
+  CarFront, // Untuk Smart Vehicle Classification
 } from "lucide-react";
 import { useLanguage } from "./LanguageContext";
+import nauticamBridgeIMG from "../../assets/nauticam_bridge.png";
+import nauticamSafetyIMG from "../../assets/nauticam_safety.png";
+import nauticamTechnicalIMG from "../../assets/nauticam_technical.png";
+import nauticamSecurityIMG from "../../assets/nauticam_security.png";
+import nauticamMarpolIMG from "../../assets/nauticam_marpol.png";
+import nauticamClassificationIMG from "../../assets/nauticam_classification.png";
 
 const fleetMasterFeatures = [
   {
@@ -38,52 +46,52 @@ const fleetMasterFeatures = [
     icon: Book,
     titleKey: "products.fleetMaster.feature4Title",
     descKey: "products.fleetMaster.feature4Desc",
-    image: "https://placehold.co/600x400/0891b2/white?text=e-Logbook",
+    image: "/src/assets/fleetmaster_logbook.png",
   },
   {
     icon: Navigation,
     titleKey: "products.fleetMaster.feature6Title",
     descKey: "products.fleetMaster.feature6Desc",
-    image: "https://placehold.co/600x400/0891b2/white?text=Navigation",
+    image: "/src/assets/fleetmaster_chart.png",
   },
 ];
 
-const nauticamAIFeatures = [
+const nauticamAIFeatures: Feature[] = [
   {
-    icon: Camera,
+    icon: Eye, // Ikon mata untuk pengawasan visual
     titleKey: "products.nauticamAI.feature1Title",
     descKey: "products.nauticamAI.feature1Desc",
-    image: "https://placehold.co/600x400/0c4a6e/white?text=Camera+AI",
+    image: nauticamBridgeIMG,
   },
   {
-    icon: Monitor,
+    icon: ShieldAlert, // Ikon tameng dengan peringatan untuk intervensi bahaya
     titleKey: "products.nauticamAI.feature2Title",
     descKey: "products.nauticamAI.feature2Desc",
-    image: "https://placehold.co/600x400/0c4a6e/white?text=Monitor",
+    image: nauticamSafetyIMG,
   },
   {
-    icon: Activity,
+    icon: Wrench, // Ikon kunci pas untuk keausan alat/teknis
     titleKey: "products.nauticamAI.feature3Title",
     descKey: "products.nauticamAI.feature3Desc",
-    image: "https://placehold.co/600x400/0c4a6e/white?text=Activity",
+    image: nauticamTechnicalIMG,
   },
   {
-    icon: Database,
+    icon: Lock, // Ikon gembok untuk keamanan dari akses tak sah
     titleKey: "products.nauticamAI.feature4Title",
     descKey: "products.nauticamAI.feature4Desc",
-    image: "https://placehold.co/600x400/0c4a6e/white?text=Database",
+    image: nauticamSecurityIMG,
   },
   {
-    icon: Search,
+    icon: Leaf, // Ikon daun untuk isu lingkungan / kepatuhan MARPOL
     titleKey: "products.nauticamAI.feature5Title",
     descKey: "products.nauticamAI.feature5Desc",
-    image: "https://placehold.co/600x400/0c4a6e/white?text=Search+AI",
+    image: nauticamMarpolIMG,
   },
   {
-    icon: Bell,
+    icon: CarFront, // Ikon mobil menghadap depan untuk deteksi golongan kendaraan
     titleKey: "products.nauticamAI.feature6Title",
     descKey: "products.nauticamAI.feature6Desc",
-    image: "https://placehold.co/600x400/0c4a6e/white?text=Alert+System",
+    image: nauticamClassificationIMG, // Pastikan ini menggunakan gambar yang baru (bukan kargo lagi)
   },
 ];
 

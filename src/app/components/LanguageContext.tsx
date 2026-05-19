@@ -318,223 +318,247 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "Comprehensive navigational data with automated noon reports combining chart data, position, speed, and fuel consumption updates",
     id: "Data navigasi komprehensif dengan laporan tengah hari otomatis menggabungkan data peta, posisi, kecepatan, dan update konsumsi bahan bakar",
   },
-  "products.nauticamAI.featuresTitle": { en: "Capabilities", id: "Kemampuan" },
+  // ── NauticamAI Capabilities ──
+  "products.nauticamAI.featuresTitle": {
+    en: "Visual Intelligence Capabilities",
+    id: "Kapabilitas Visual Cerdas",
+  },
   "products.nauticamAI.feature1Title": {
-    en: "AI-Powered Event Detection",
-    id: "Deteksi Peristiwa Berbasis AI",
+    en: "Bridge Navigation Oversight",
+    id: "Pengawasan Navigasi Anjungan",
   },
   "products.nauticamAI.feature1Desc": {
-    en: "Real-time anomaly detection using advanced computer vision technology",
-    id: "Deteksi anomali real-time menggunakan teknologi computer vision canggih",
+    en: "Automatically detect and correct navigation drift or anomalies before critical incidents occur.",
+    id: "Deteksi dan koreksi penyimpangan navigasi atau anomali secara otomatis sebelum insiden kritis terjadi.",
   },
   "products.nauticamAI.feature2Title": {
-    en: "Onboard & Onshore Dashboards",
-    id: "Dashboard Kapal & Pantai",
+    en: "Real-Time Safety Intervention",
+    id: "Intervensi Keselamatan Real-Time",
   },
   "products.nauticamAI.feature2Desc": {
-    en: "Unified dashboards enabling seamless ship-shore collaboration and insights sharing",
-    id: "Dashboard terpadu yang memungkinkan kolaborasi kapal-pantai yang mulus dan berbagi insight",
+    en: "Monitor deck activities 24/7 and instantly intervene on unsafe behaviors to drastically reduce crew injuries.",
+    id: "Pantau aktivitas dek 24/7 dan intervensi perilaku tidak aman seketika untuk menekan angka cedera kru secara drastis.",
   },
   "products.nauticamAI.feature3Title": {
-    en: "Multi-Area Monitoring",
-    id: "Monitoring Multi-Area",
+    en: "Technical Failure Prevention",
+    id: "Pencegahan Kegagalan Teknis",
   },
   "products.nauticamAI.feature3Desc": {
-    en: "Comprehensive coverage: security, bridge, cargo, safety, maintenance, and pollution",
-    id: "Cakupan komprehensif: keamanan, jembatan, kargo, keselamatan, pemeliharaan, dan polusi",
+    en: "Identify visual cues of equipment wear and act on early failure signals before costly operational downtime.",
+    id: "Identifikasi tanda visual keausan alat dan tindak lanjuti sinyal kegagalan lebih awal sebelum terjadi waktu henti operasional.",
   },
   "products.nauticamAI.feature4Title": {
-    en: "External Data Integration",
-    id: "Integrasi Data Eksternal",
+    en: "Proactive Threat Security",
+    id: "Pertahanan Keamanan Proaktif",
   },
   "products.nauticamAI.feature4Desc": {
-    en: "Enriched insights with AIS and weather data for comprehensive situational awareness",
-    id: "Insight yang diperkaya dengan data AIS dan cuaca untuk kesadaran situasional yang komprehensif",
+    en: "Maintain continuous surveillance to respond rapidly to unauthorized access and threats before breaches escalate.",
+    id: "Pertahankan pengawasan berkelanjutan untuk merespons akses tak sah dan ancaman dengan cepat sebelum eskalasi meluas.",
   },
   "products.nauticamAI.feature5Title": {
-    en: "Digital Event Log",
-    id: "Log Peristiwa Digital",
+    en: "MARPOL Compliance Monitoring",
+    id: "Pemantauan Kepatuhan MARPOL",
   },
   "products.nauticamAI.feature5Desc": {
-    en: "Searchable video-to-insight conversion transforming raw footage into actionable intelligence",
-    id: "Konversi video-ke-insight yang dapat dicari mengubah rekaman mentah menjadi intelijen yang dapat ditindaklanjuti",
+    en: "Address environmental safety gaps and pollution risks proactively before they become costly regulatory findings.",
+    id: "Atasi celah keselamatan lingkungan dan risiko polusi secara proaktif sebelum menjadi temuan audit regulasi yang memakan biaya.",
   },
   "products.nauticamAI.feature6Title": {
-    en: "Automated Alerts",
-    id: "Peringatan Otomatis",
+    en: "Smart Vehicle Classification",
+    id: "Deteksi Golongan Kendaraan Cerdas",
   },
   "products.nauticamAI.feature6Desc": {
-    en: "Proactive notifications for hazards, anomalies, and operational inefficiencies",
-    id: "Notifikasi proaktif untuk bahaya, anomali, dan ketidakefisienan operasional",
+    en: "Seamlessly detect, count, and categorize boarding vehicles in real-time to maximize deck capacity and manifest accuracy.",
+    id: "Deteksi, hitung, dan golongkan tipe kendaraan secara otomatis dan real-time untuk memaksimalkan ruang muat dan memastikan akurasi manifes.",
   },
   // ── Problem Section ──
-  "problem.label": { en: "The Challenge", id: "Tantangan" },
+  "problem.label": { en: "Industry Challenges", id: "Tantangan Industri" },
   "problem.heading": {
-    en: "Maritime Industry Challenges",
-    id: "Tantangan Industri Maritim",
+    en: "The Gaps in Maritime Operations",
+    id: "Celah dalam Operasi Maritim",
   },
   "problem.subheading": {
-    en: "Indonesia's maritime sector faces significant operational hurdles. Small and medium ship owners struggle with outdated processes, limited visibility, and rising costs in an increasingly regulated environment.",
-    id: "Sektor maritim Indonesia menghadapi berbagai kendala operasional. Pemilik kapal kecil dan menengah berjuang dengan proses yang ketinggalan zaman, visibilitas terbatas, dan biaya yang terus meningkat di tengah regulasi yang semakin ketat.",
+    en: "The maritime sector faces immense losses due to a critical disconnect: managing engine and fuel data without real-time visual safety oversight, creating operational blind spots.",
+    id: "Sektor maritim menghadapi kerugian besar akibat keterputusan kritis: mengelola data mesin dan BBM berjalan tanpa pengawasan visual real-time, menciptakan titik buta operasional.",
   },
   "problem.p1Title": {
-    en: "No Real-Time Fleet Visibility",
-    id: "Tidak Ada Visibilitas Armada Real-Time",
+    en: "Unmonitored Fuel Inefficiency",
+    id: "Inefisiensi BBM Tak Terdeteksi",
   },
   "problem.p1Desc": {
-    en: "Ship owners lack live tracking of vessel locations, voyage status, and performance — leading to delayed decisions and poor fleet oversight.",
-    id: "Pemilik kapal tidak memiliki pelacakan langsung terhadap lokasi kapal, status pelayaran, dan performa — menyebabkan keterlambatan keputusan dan pengawasan armada yang buruk.",
+    en: "Without precise analytics tools, vessel fuel consumption climbs unnoticed due to suboptimal routing and uncalculated engine loads.",
+    id: "Tanpa alat analitik presisi, konsumsi bahan bakar kapal membengkak tanpa disadari akibat rute buruk dan beban mesin yang tidak terhitung.",
   },
   "problem.p2Title": {
-    en: "Manual & Paper-Based Reporting",
-    id: "Pelaporan Manual & Berbasis Kertas",
+    en: "Critical Blind Spots & Collision Risks",
+    id: "Risiko Tabrakan & Blind Spot Kritis",
   },
   "problem.p2Desc": {
-    en: "Noon reports and voyage logs are still submitted manually, making data unreliable, slow to process, and difficult to audit.",
-    id: "Noon report dan log pelayaran masih dikirimkan secara manual, membuat data tidak akurat, lambat diproses, dan sulit diaudit.",
+    en: "Crew on the bridge face limited visual clarity at night or during heavy weather, increasing the risk of expensive accidents and asset damage.",
+    id: "Kru di jembatan menghadapi keterbatasan pandangan visual saat malam atau cuaca buruk, meningkatkan risiko kecelakaan mahal dan kerusakan aset.",
   },
   "problem.p3Title": {
-    en: "Inefficient Fuel Management",
-    id: "Manajemen Bahan Bakar Tidak Efisien",
+    en: "Unreliable Manual Logbooks",
+    id: "Buku Log Manual Tidak Andal",
   },
   "problem.p3Desc": {
-    en: "Without route and speed optimisation tools, fuel consumption is higher than necessary — directly inflating operational costs.",
-    id: "Tanpa alat optimasi rute dan kecepatan, konsumsi bahan bakar lebih tinggi dari yang seharusnya — langsung meningkatkan biaya operasional.",
+    en: "Noon reports and voyage logs compiled manually are prone to operational delays, human entries errors, and difficult tracking.",
+    id: "Noon report dan log pelayaran yang disusun secara manual rentan tertunda, salah catat, dan sulit untuk diaudit secara akurat.",
   },
-  "problem.p4Title": { en: "Reactive Maintenance", id: "Perawatan Reaktif" },
+  "problem.p4Title": {
+    en: "Unseen Deck Operations & Hazards",
+    id: "Operasi Dek & Bahaya Luput Pengawasan",
+  },
   "problem.p4Desc": {
-    en: "Maintenance is handled after breakdowns occur rather than being planned ahead, resulting in costly downtime and unplanned incidents.",
-    id: "Perawatan dilakukan setelah kerusakan terjadi, bukan direncanakan sebelumnya — mengakibatkan downtime mahal dan insiden tak terduga.",
+    en: "Onshore managers lack live visual updates on deck activities, cargo status, and crew safety gear compliance during voyages.",
+    id: "Manajer di darat tidak memiliki pemantauan visual langsung terhadap aktivitas dek, kondisi kargo, dan kepatuhan K3 kru selama pelayaran.",
   },
   "problem.p5Title": {
-    en: "Mounting Regulatory Pressure",
-    id: "Tekanan Regulasi yang Semakin Berat",
+    en: "Strict Emissions & Safety Mandates",
+    id: "Tekanan Regulasi Emisi & Keselamatan",
   },
   "problem.p5Desc": {
-    en: "IMO 2023 standards are pushing shipping companies to reduce carbon emissions and improve fuel efficiency — requiring accurate operational data.",
-    id: "Standar IMO 2023 mendorong perusahaan pelayaran untuk mengurangi emisi karbon dan meningkatkan efisiensi bahan bakar — yang memerlukan data operasional yang akurat.",
+    en: "IMO international regulations require strict carbon reporting and high safety standards, demanding bulletproof digital proof.",
+    id: "Regulasi internasional IMO menuntut pelaporan karbon yang ketat dan standar keselamatan tinggi, membutuhkan bukti data digital yang kuat.",
   },
   "problem.p6Title": {
-    en: "High Cost of Digitalisation",
-    id: "Biaya Digitalisasi yang Tinggi",
+    en: "Disruptive & High Cost Digitalization",
+    id: "Digitalisasi Mahal & Mengganggu Operasional",
   },
   "problem.p6Desc": {
-    en: "Many digital solutions demand expensive hardware upgrades or complete workflow overhauls, making adoption impractical for most ship owners.",
-    id: "Banyak solusi digital mensyaratkan peningkatan hardware mahal atau perombakan total alur kerja, menjadikannya tidak praktis bagi sebagian besar pemilik kapal.",
+    en: "Traditional maritime technology requires expensive custom hardware installations and intrusive operational downtime on legacy ships.",
+    id: "Teknologi maritim tradisional membutuhkan instalasi hardware kustom yang mahal dan downtime operasional yang mengganggu kapal lama.",
   },
 
   // ── Solution Section ──
-  "solution.label": { en: "Our Approach", id: "Solusi Kami" },
-  "solution.heading": { en: "SLI Fleet Master", id: "SLI Fleet Master" },
-  "solution.subheading": {
-    en: "SLI Fleet Master is an integrated fleet management platform that makes digital transformation easy, fast, and cost-effective — without changing your operation workflow or upgrading your hardware.",
-    id: "SLI Fleet Master adalah platform manajemen armada terpadu yang membuat transformasi digital menjadi mudah, cepat, dan hemat biaya — tanpa mengubah alur kerja operasi atau meningkatkan hardware Anda.",
+  "solution.label": {
+    en: "Our Solution Ecosystem",
+    id: "Ekosistem Solusi Kami",
   },
-  "solution.s1Title": { en: "Fleet Supervision", id: "Pengawasan Armada" },
+  "solution.heading": {
+    en: "The Brain and Eyes Strategy",
+    id: "Strategi Otak dan Mata Maritim",
+  },
+  "solution.subheading": {
+    en: "We combine the analytical brain of SLI Fleet Master with the powerful visual eyes of NauticamAI into one seamless digital hub.",
+    id: "Kami memadukan otak analitik SLI Fleet Master dengan mata visual NauticamAI dalam satu pusat digital yang terintegrasi.",
+  },
+  "solution.s1Title": {
+    en: "Performance & Fuel Optimization (Fleet Master)",
+    id: "Optimasi Performa & BBM (Fleet Master)",
+  },
   "solution.s1Desc": {
-    en: "Get a real-time helicopter view of your entire fleet — vessel positions on the map, voyage status, weather conditions, draft, and speed — all in one centralised dashboard.",
-    id: "Dapatkan tampilan helikopter real-time dari seluruh armada — posisi kapal di peta, status pelayaran, kondisi cuaca, draft, dan kecepatan — semuanya dalam satu dashboard terpusat.",
+    en: "Transforms raw engine logs into operational insights to reduce fuel consumption, track maintenance, and calculate optimal route profiles.",
+    id: "Mengubah log mesin mentah menjadi wawasan operasional untuk menekan konsumsi bahan bakar, melacak perawatan, dan menghitung rute optimal.",
   },
   "solution.s2Title": {
-    en: "Voyage Supervision & Path Optimisation",
-    id: "Pengawasan Pelayaran & Optimasi Rute",
+    en: "Smart Visual Computer Vision (NauticamAI)",
+    id: "Computer Vision Cerdas (NauticamAI)",
   },
   "solution.s2Desc": {
-    en: "Review past and ongoing voyages with full KPI breakdowns: fuel consumption, RPM, engine load, and weather impact. Plan optimal routes to minimise fuel costs.",
-    id: "Tinjau pelayaran lalu dan yang sedang berlangsung dengan rincian KPI lengkap: konsumsi BBM, RPM, beban mesin, dan dampak cuaca. Rencanakan rute optimal untuk meminimalkan biaya bahan bakar.",
+    en: "Deploys automated AI models to track bridge safety, monitor deck parameters, and detect external maritime hazards 24/7.",
+    id: "Menerapkan model AI otomatis untuk memantau keselamatan jembatan, mengawasi parameter dek, dan mendeteksi bahaya eksternal 24/7.",
   },
-  "solution.s3Title": { en: "OnBoard Reports", id: "Laporan OnBoard" },
+  "solution.s3Title": {
+    en: "Unified Ship-to-Shore Digital Hub",
+    id: "Pusat Digital Kapal-ke-Darat Terpadu",
+  },
   "solution.s3Desc": {
-    en: "Digitise noon reports and voyage logs. Receive automated alerts when reported speed, fuel, or weather data deviates from expected values. Export all data in CSV format.",
-    id: "Digitalkan noon report dan log pelayaran. Terima notifikasi otomatis bila kecepatan, konsumsi BBM, atau data cuaca yang dilaporkan menyimpang. Ekspor semua data dalam format CSV.",
+    en: "Synchronizes automated telemetry and live camera streams into a single dashboard accessible anywhere by management.",
+    id: "Menyinkronkan telemetri otomatis dan rekaman kamera langsung ke dalam satu dashboard yang dapat diakses manajemen di mana saja.",
   },
-  "solution.s4Title": { en: "Maintenance Tracking", id: "Pelacakan Perawatan" },
+  "solution.s4Title": {
+    en: "Predictive Insights & Automated Logs",
+    id: "Insight Prediktif & Log Otomatis",
+  },
   "solution.s4Desc": {
-    en: "Track your ship maintenance plan proactively to avoid costly unplanned breakdowns and keep vessels in optimal condition.",
-    id: "Pantau rencana perawatan kapal secara proaktif untuk menghindari kerusakan tak terduga yang mahal dan menjaga kondisi kapal tetap optimal.",
+    en: "Combines digital event logs with predictive analytics for automated noon reports and instant hazard notifications.",
+    id: "Menggabungkan log peristiwa digital dengan analitik prediktif untuk noon report otomatis dan notifikasi bahaya instan.",
   },
   "solution.statsHeading": {
-    en: "Designed for the Indonesian Fleet",
-    id: "Dirancang untuk Armada Indonesia",
+    en: "Designed for Comprehensive Security",
+    id: "Dirancang untuk Keamanan Menyeluruh",
   },
   "solution.statsSubheading": {
-    en: "Built around the realities of small-medium ship owners operating legacy vessels.",
-    id: "Dibangun sesuai realitas pemilik kapal kecil-menengah yang mengoperasikan kapal-kapal lama.",
+    en: "Maximum safety and ultimate fuel efficiency engineered perfectly into small-medium fleets.",
+    id: "Keselamatan maksimal dan efisiensi bahan bakar optimal yang dirancang untuk armada kapal kecil-menengah.",
   },
   "solution.stat1": {
-    en: "Operational workflow changes",
-    id: "Perubahan alur kerja operasional",
+    en: "Operational workflow gaps",
+    id: "Celah alur kerja operasional",
   },
   "solution.stat2": {
-    en: "Hardware upgrades required",
-    id: "Upgrade hardware diperlukan",
+    en: "Hardware overhaul required",
+    id: "Perombakan hardware diperlukan",
   },
   "solution.stat3": {
-    en: "Fleet monitoring availability",
-    id: "Ketersediaan pemantauan armada",
+    en: "Active automated oversight",
+    id: "Pengawasan otomatis aktif",
   },
   "solution.stat4": {
-    en: "Compatible with existing ship systems",
-    id: "Kompatibel dengan sistem kapal yang ada",
+    en: "Vessel-to-cloud compatibility",
+    id: "Kompatibilitas kapal-ke-cloud",
   },
 
-  // ── Why SLI (Section 07) ──
+  // ── Why SLI Section ──
   "why.label": { en: "Why SLI", id: "Mengapa SLI" },
   "why.heading": {
     en: "The Strategic Case for Choosing SLI",
     id: "Alasan Strategis Memilih SLI",
   },
   "why.subheading": {
-    en: "Built by experts with maritime, software, and consulting experience — we understand the real challenges Indonesian ship owners face.",
-    id: "Dibangun oleh para ahli dengan pengalaman di bidang maritim, perangkat lunak, dan konsultasi — kami memahami tantangan nyata yang dihadapi pemilik kapal Indonesia.",
+    en: "We bridge the gap between complex naval architecture, multi-layer data analytics, and continuous visual edge AI computing.",
+    id: "Kami menjembatani celah antara arsitektur kapal yang kompleks, analitik data multi-lapisan, dan visual edge AI computing.",
   },
   "why.r1Title": {
-    en: "People + Technology, Not One or the Other",
-    id: "People + Technology, Bukan Salah Satu",
+    en: "Data Analytics Meets Computer Vision",
+    id: "Analitik Data Bertemu Computer Vision",
   },
   "why.r1Desc": {
-    en: "SLI integrates a powerful technology platform, accompanied by a team of experts who understand maritime operations from the inside.",
-    id: "SLI mengintegrasikan platform teknologi yang powerful, didampingi oleh tim ahli yang memahami operasi maritim dari dalam.",
+    en: "SLI is the only platform that merges core engineering telemetries with contextual visual intelligence under one roof.",
+    id: "SLI adalah satu-satunya platform yang menggabungkan telemetri teknik inti dengan inteligensi visual kontekstual di bawah satu atap.",
   },
   "why.r2Title": {
-    en: "Unmatched Domain Expertise",
-    id: "Domain Expertise yang Tidak Tertandingi",
+    en: "Unparalleled Maritime DNA",
+    id: "DNA Maritim yang Tak Tertandingi",
   },
   "why.r2Desc": {
-    en: "With direct affiliation to PT Terafulk Megantara Design and a cross-industry experienced team, SLI speaks the same language as its clients.",
-    id: "Dengan afiliasi langsung ke PT Terafulk Megantara Design dan tim berpengalaman lintas industri, SLI berbicara bahasa yang sama dengan klien.",
+    en: "With deep ship design background, our algorithms understand ship hydrodynamics, class compliance standards, and operational realities.",
+    id: "Dengan latar belakang desain kapal yang mendalam, algoritma kami memahami hidrodinamika kapal, standar class compliance, dan realitas operasional.",
   },
   "why.r3Title": {
-    en: "Implementation Without Disruption",
+    en: "Non-Invasive Implementation",
     id: "Implementasi Tanpa Disrupsi",
   },
   "why.r3Desc": {
-    en: "Zero-friction onboarding is our promise. Our system adapts to your way of working. Valuable insights in days, not months.",
-    id: "Zero-friction onboarding adalah janji kami. Sistem kami beradaptasi dengan cara kerja Anda. Insight berharga dalam hitungan hari, bukan bulan.",
+    en: "Zero-friction onboarding. We leverage your existing sensors, analog outputs, and CCTV cameras. Value in days, not months.",
+    id: "Onboarding tanpa friksi. Kami memanfaatkan sensor, output analog, dan kamera CCTV yang sudah ada. Insight didapat dalam hitungan hari.",
   },
   "why.r4Title": {
-    en: "Scalable from One Ship to a Large Fleet",
-    id: "Skalabel dari Satu Kapal hingga Armada Besar",
+    en: "Scalable Infrastructure Architecture",
+    id: "Arsitektur Infrastruktur Skalabel",
   },
   "why.r4Desc": {
-    en: "From single vessel operators to shipping companies with hundreds of units, the SLI platform grows with your needs.",
-    id: "Dari operator kapal tunggal hingga perusahaan pelayaran dengan ratusan unit, platform SLI tumbuh bersama kebutuhan Anda.",
+    en: "Our cloud-powered solution dynamically scales from single legacy vessel management to hundreds of units flawlessly.",
+    id: "Solusi berbasis cloud kami berkembang secara dinamis dari manajemen kapal tunggal hingga ratusan unit tanpa kendala.",
   },
   "why.r5Title": {
-    en: "Measurable & Transparent ROI",
-    id: "ROI yang Terukur dan Transparan",
+    en: "Double-Value Transparent ROI",
+    id: "ROI Transparan Berlipat Ganda",
   },
   "why.r5Desc": {
-    en: "We don't just promise efficiency — we measure it. Every client gets a performance dashboard showing real-time savings.",
-    id: "Kami tidak hanya berjanji efisiensi — kami mengukurnya. Setiap klien mendapatkan dashboard kinerja yang menunjukkan penghematan secara real-time.",
+    // Penambahan "maximized commercial capacity" / "optimalisasi kapasitas komersial"
+    en: "Track clear fuel savings, quantified accident prevention metrics, and maximized commercial capacity clearly on your corporate dashboard.",
+    id: "Pantau penghematan BBM, metrik pencegahan kecelakaan, hingga optimalisasi kapasitas komersial secara transparan di dashboard perusahaan Anda.",
   },
   "why.r6Title": {
-    en: "Report Accuracy: Weekly & Every Voyage",
-    id: "Akurasi Report: Weekly & Every Voyage",
+    // Ubah judul agar menyinggung "Compliance/Kepatuhan" yang relevan dengan MARPOL & E-Log
+    en: "Absolute Precision & Compliance",
+    id: "Presisi & Kepatuhan Mutlak",
   },
   "why.r6Desc": {
-    en: "Fleet performance reports are compiled accurately every week and every voyage — ensuring operational data is always up-to-date for strategic decision-making.",
-    id: "Laporan performa armada disusun secara akurat setiap minggu dan setiap voyage — memastikan data operasional selalu up-to-date untuk pengambilan keputusan strategis.",
+    en: "Get verified, geolocated event logs and automated reports that ensure your fleet stays ahead of international safety and environmental regulations.",
+    id: "Dapatkan log peristiwa terverifikasi dan laporan otomatis yang memastikan armada Anda selalu selangkah lebih maju dalam kepatuhan regulasi keselamatan dan lingkungan internasional.",
   },
 
   // ── Digital Twin Section ──
