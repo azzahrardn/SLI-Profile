@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router";
 import { LanguageProvider } from "./components/LanguageContext";
+import ScrollToTop from "./components/ScrollToTop"; // Sesuaikan path ini jika Anda menyimpannya di folder lain
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import SolutionPage from "./pages/SolutionPage";
@@ -14,6 +15,9 @@ import TechnologyPage from "./pages/TechnologyPage";
 export default function App() {
   return (
     <LanguageProvider>
+      {/* Panggil komponen ScrollToTop di sini, di luar Routes */}
+      <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
